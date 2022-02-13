@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "blogapp-91fdd": {
+      "hosting": {
+        "blogApp": [
+          "blogapp-91fdd"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "blogapp-91fdd"
+  }
+}

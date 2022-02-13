@@ -1,0 +1,43 @@
+<div class="d-flex justify-content-center p-1">
+    <div style="width: 700px;top:calc(50vh - 250px)" class="card standard-shadow p-3 position-absolute">
+        <div class="row">
+            <div class="col">
+                <h3>Signup</h3>
+                <form class="m-2" [formGroup]="signupData">
+                    <label>Username</label>
+                    <input type="text" class='form-control' placeholder="metaguy" formControlName="username" required>
+                    <label>Email</label>
+                    <input type="email" class='form-control' placeholder="johndoe@gmail.com" formControlName="email"
+                        required>
+                    <label>Password</label>
+                    <input type="password" class='form-control' placeholder="********" formControlName="password"
+                        required>
+                    <label>Confirm Password</label>
+                    <input type="password" class='form-control' placeholder="********" formControlName="cpassword"
+                        required>
+                    <br>
+                    <button class="btn btn-primary" (click)="handleSignupSubmit()">Signup</button>
+                </form>
+
+            </div>
+            <div class="col">
+                <h3>Login</h3>
+                <form class="m-2" [formGroup]="loginData">
+                    <label>Email</label>
+                    <input type="email" class='form-control' placeholder="johndoe@gmail.com" formControlName="email"
+                        required>
+                    <label>Password</label>
+                    <input type="password" class='form-control' placeholder="********" formControlName="password"
+                        required>
+                    <br>
+                    <button class="btn btn-primary" (click)="handleLoginSubmit()">Login</button>
+                </form>
+            </div>
+        </div>
+        <br>
+        <p class="h3">Or Signin with</p>
+        <div class="btn btn-light standard-shadow" (click)="handleGoogleSignin()">
+            <img src="https://img.icons8.com/color/32/000000/google-logo.png" />
+        </div>
+    </div>
+</div>
