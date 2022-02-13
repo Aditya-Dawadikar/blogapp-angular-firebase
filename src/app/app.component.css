@@ -21,3 +21,55 @@
     width: 100%;
     background-color: rgba(161, 161, 161,0.5);
 }
+
+.content-start{
+    height: 100%;
+    top:50px;
+}
+
+.model{
+    min-width:200px;
+    min-height:100px;
+    top:70px;
+    right:20px;
+}
+
+.editor{
+    width: 700px;
+}
+
+.sidebar{
+    top:100px;
+}
+
+.login{
+    width: 700px;top:calc(50vh - 250px)
+}
+
+@media only screen and (max-width: 1010px) {
+
+    .sidebar{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 993px) {
+    .content-start{
+        height: 100%;
+        top:150px;
+    }
+    .model{
+        top:150px;
+    }
+
+    .editor{
+        width: calc(100vw - 50px);
+    }
+
+    .sidebar{
+        display: none;
+    }
+    .login{
+        width: calc(100% - 20px);
+    }
+}

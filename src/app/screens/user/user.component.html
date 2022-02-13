@@ -1,6 +1,7 @@
-<div class="container position-relative" style="height: 100%;top:50px">
+<div class="container position-relative  content-start">
     <div class="row">
-        <div class="col-8">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-8 col-md-12 col-sm-12">
             <div *ngIf="blogs.length==0">
                 <br><br>
                 <div class="h3">Nothing to show yet...</div>
@@ -12,9 +13,7 @@
                 </li>
             </ul>
         </div>
-        <div class="col-4">
-            <!-- user information and options -->
-            <app-usersidebar [display]=true></app-usersidebar>
-        </div>
+        
+        <app-usersidebar [display]=true></app-usersidebar>
     </div>
 </div>

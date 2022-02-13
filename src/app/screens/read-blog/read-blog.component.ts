@@ -5,7 +5,7 @@ import {AngularFirestore} from '@angular/fire/compat/firestore'
 @Component({
   selector: 'app-read-blog',
   templateUrl: './read-blog.component.html',
-  styleUrls: ['./read-blog.component.css']
+  styleUrls: ['./read-blog.component.css','../../app.component.css']
 })
 export class ReadBlogComponent implements OnInit {
 

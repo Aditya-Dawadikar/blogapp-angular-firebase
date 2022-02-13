@@ -10,5 +10,5 @@ export const environment = {
     messagingSenderId: '106104609740',
     measurementId: 'G-FSWGWZWGXW',
   },
-  base_path:"https://fir-integration-blogsite.web.app/"
+  base_path:"https://blogapp-91fdd.web.app/"
 };
