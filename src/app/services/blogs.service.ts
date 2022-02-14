@@ -13,6 +13,7 @@ export class BlogsService {
   constructor(private afs:AngularFirestore) { }
 
   getBlogs(){
+    this.blogs=[]
     this.afs.collection("blogs").snapshotChanges().subscribe((data)=>{
       data.map(d=>{
         let blogDoc={
@@ -29,6 +30,10 @@ export class BlogsService {
         this.blogs.push(blogDoc)
       })
     })
+    return this.blogs
+  }
+
+  getCurrBlogs(){
     return this.blogs
   }
 

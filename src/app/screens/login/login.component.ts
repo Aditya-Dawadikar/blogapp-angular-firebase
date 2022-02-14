@@ -18,13 +18,6 @@ export class LoginComponent implements OnInit {
     password: ['', [Validators.required]]
   })
 
-  signupData = this.fb.group({
-    username: ['', [Validators.required]],
-    email: ['', [Validators.required, Validators.email]],
-    password: ['', [Validators.required]],
-    cpassword: ['', [Validators.required]]
-  })
-
   ngOnInit(): void {
   }
 
@@ -32,18 +25,11 @@ export class LoginComponent implements OnInit {
     // console.log(this.loginData.value)
     if (this.loginData.status == 'VALID') {
       this.user.login(this.loginData.value.email, this.loginData.value.password)
+    }else{
+      alert("please enter email and password")
     }
   }
-  handleSignupSubmit() {
-    // console.log(this.signupData.status)
-    if (this.signupData.status == 'VALID') {
-      if (this.signupData.value.password === this.signupData.value.cpassword) {
-        this.user.signup(this.signupData.value.email, this.signupData.value.password, this.signupData.value.username)
-      } else {
-        alert("password and confirm password does not match")
-      }
-    }
-  }
+  
   handleGoogleSignin() {
     this.user.SigninWithGoogle()
   }

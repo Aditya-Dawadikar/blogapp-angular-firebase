@@ -1,0 +1,9 @@
+<form [formGroup]="filterData">
+    <div class="d-flex">
+        <button *ngIf="filterData.value.query!==''" class="btn btn-secondary" (click)="clearQuery()" style="max-height:40px;border-radius: 30px;margin-right: 10px;">Clear</button>
+        <div class="input-group">
+            <input class="form-control" placeholder="type something..." formControlName="query">
+            <div class="btn btn-primary" (click)="query()">Q</div>
+        </div>
+    </div>
+</form>

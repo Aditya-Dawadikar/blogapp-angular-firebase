@@ -15,6 +15,7 @@ import { UsersidebarComponent } from './components/usersidebar/usersidebar.compo
 import { BlogsComponent } from './screens/blogs/blogs.component';
 import { EditorComponent } from './screens/editor/editor.component';
 import { LoginComponent } from './screens/login/login.component';
+import { SignupComponent } from './screens/signup/signup.component';
 import { ReadBlogComponent } from './screens/read-blog/read-blog.component';
 import { UserComponent } from './screens/user/user.component';
 
@@ -22,6 +23,7 @@ import { environment } from 'src/environments/environment';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { FilterComponent } from './components/filter/filter.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +36,9 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     EditorComponent,
     LoginComponent,
     ReadBlogComponent,
-    UserComponent
+    UserComponent,
+    FilterComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,

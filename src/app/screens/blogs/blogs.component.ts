@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import {BlogsService} from '../../services/blogs.service'
+import { FilterService } from 'src/app/services/filter.service';
  
 @Component({
   selector: 'app-blogs',
@@ -11,7 +12,10 @@ export class BlogsComponent implements OnInit {
 
   public blogs:any[]=[];
 
-  constructor(private bs:BlogsService) {
+  constructor(private bs:BlogsService,private fs:FilterService) {
+    this.fs.$filterService.subscribe((data:any)=>{
+      this.blogs=data
+    })
   }
 
   ngOnInit(): void {
